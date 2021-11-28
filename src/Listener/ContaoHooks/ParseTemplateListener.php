@@ -12,6 +12,8 @@ declare(strict_types=1);
  * @link https://github.com/markocupic/contao-folderpage-ext
  */
 
+namespace Markocupic\ContaoFolderpageExt\Listener\ContaoHooks;
+
 use Contao\CoreBundle\Routing\ScopeMatcher;
 use Contao\CoreBundle\ServiceAnnotation\Hook;
 use Contao\Template;
@@ -47,8 +49,8 @@ class ParseTemplateListener
                 $items = $objTemplate->items;
 
                 foreach ($items as $k => $v) {
-                    if ('folder' === $items[$k]['type']) {
-                        $arrClass = explode(' ', (string) $items[$k]['class']);
+                    if ('folder' === $v['type']) {
+                        $arrClass = explode(' ', (string) $v['class']);
                         $arrClass[] = 'folder';
                         $items[$k]['class'] = implode(' ', array_filter(array_unique($arrClass)));
                     }
