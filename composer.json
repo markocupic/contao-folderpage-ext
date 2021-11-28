@@ -1,0 +1,42 @@
+{
+    "name": "markocupic/contao-folderpage-ext",
+    "description": "This plugin extends terminal42/contao-folderpage and does nothing more than adding the CSS class 'folder' to all 'nav_*' templates.",
+    "keywords": [
+        "folderpage",
+        "terminal42",
+        "template"
+    ],
+    "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Marko Cupic",
+            "email": "m.cupic@gmx.ch",
+            "homepage": "https://github.com/markocupic/contao-folderpage-ext",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/markocupic/contao-folderpage-ext/issues",
+        "source": "https://github.com/markocupic/contao-folderpage-ext"
+    },
+    "require": {
+        "contao/core-bundle": "^4.9",
+        "terminal42/contao-folderpage": "^2.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.3",
+        "contao/test-case": "^4.0",
+        "phpunit/phpunit": "^8.4",
+        "symfony/http-client": "4.4.*",
+        "symfony/phpunit-bridge": "4.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Markocupic\\ContaoFolderpageExt\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Markocupic\\ContaoFolderpageExt\\ContaoManager\\Plugin"
+    }
+}
