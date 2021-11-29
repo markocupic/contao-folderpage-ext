@@ -44,7 +44,8 @@ class ParseTemplateListener
 
     public function __invoke(Template $objTemplate): void
     {
-        if ($this->isFrontend()) {
+
+        if (null !== $this->requestStack->getCurrentRequest() && $this->isFrontend()) {
             if (0 === strpos($objTemplate->getName(), 'nav_')) {
                 $items = $objTemplate->items;
 
